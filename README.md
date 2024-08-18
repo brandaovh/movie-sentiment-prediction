@@ -1,53 +1,41 @@
 <h1>Movie Review Sentiment Analysis and Prediction</h1>
-<p>This project was part of my Big Data Analytics course, where we performed end-to-end data analysis, pre-processing, sentiment analysis, and predictive modeling using a movie dataset from HydraHD and reviews fetched from IMDb.</p>
+<p>This project was part of my Big Data Analytics course, where we performed end-to-end data analysis, pre-processing, sentiment analysis, and predictive modeling using a movie dataset from data.world and reviews fetched from IMDb.</p>
 
 <h2>Project Overview</h2>
-<p>In this project, we selected a primary dataset with movie information from HydraHD. We enhanced this dataset by fetching reviews from IMDb using the Cinemagoer API, creating a secondary dataset with additional sentiment-related information. The primary goal was to predict movie review sentiments and review scores using various machine learning models.</p>
+<p>In this project, we selected a primary dataset with movie information from data.world. We enhanced this dataset by fetching reviews from IMDb using the Cinemagoer API, creating a secondary dataset with additional sentiment-related information. The primary goal was to predict movie review sentiments and review scores using various machine learning models.</p>
 
 <h2>Datasets</h2>
 
-<h3>Primary Dataset: HydraHD Movie Information</h3>
+<h3>Primary Dataset: Movie Information</h3>
 <ul>
-    <li><strong>Source:</strong> HydraHD (Hydra)</li>
-    <li><strong>Size:</strong> 4,000+ movies</li>
-    <li><strong>Contents:</strong> Movie IDs, titles, genres, release dates, etc.</li>
+    <li><strong>Source:</strong> data.world (<a href="https://data.world/iliketurtles/movie-dataset">https://data.world/iliketurtles/movie-dataset</a>)</li>
+    <li><strong>Size:</strong> 3,940 movies</li>
+    <li><strong>Contents:</strong> Movie title, Year of Release, Full Summary, Genres, Rating, etc.</li>
 </ul>
 
 <h3>Secondary Dataset: IMDb Reviews</h3>
 <ul>
     <li><strong>Source:</strong> Fetched using IMDb’s Cinemagoer API</li>
-    <li><strong>Size:</strong> Matched to the HydraHD dataset</li>
+    <li><strong>Size:</strong> 84,135 reviews</li>
     <li><strong>Contents:</strong> Movie IDs, review content, review ratings</li>
 </ul>
 
 <h2>Data Collection and Pre-processing</h2>
-
-<h3>IMDb Review Extraction</h3>
 <ul>
     <li><strong>Challenges:</strong> IMDb API limitations for bulk data retrieval.</li>
     <li><strong>Techniques Used:</strong>
         <ul>
-            <li><strong>Batch Processing:</strong> To handle large volumes of requests.</li>
-            <li><strong>Parallel Thread Processing:</strong> To speed up data retrieval.</li>
-            <li><strong>Rate Limiting:</strong> To avoid API rate limits.</li>
+            <li>Batch Processing, Parallel Thread Processing, and Rate Limiting to handle large volumes of data and optimize retrieval.</li>
         </ul>
     </li>
-</ul>
-
-<h3>Data Standardization</h3>
-<p>Converted the fetched reviews into a Pandas DataFrame. Standardized the data to ensure consistency across datasets.</p>
-
-<h3>Text Processing</h3>
-<ul>
-    <li><strong>Language Detection:</strong> Identified and filtered reviews based on language.</li>
-    <li><strong>Text Pre-processing:</strong>
+    <li><strong>Data Standardization:</strong> Converted the fetched reviews into a Pandas DataFrame and standardized the data for consistency.</li>
+    <li><strong>Text Processing:</strong>
         <ul>
-            <li>Tokenization</li>
-            <li>Stopwords removal</li>
-            <li>Lemmatization using NLTK</li>
+            <li>Language Detection and Filtering</li>
+            <li>Text Pre-processing: Tokenization, Stopwords Removal, Lemmatization using NLTK</li>
+            <li>Feature Extraction: TF-IDF for numerical representation of text data.</li>
         </ul>
     </li>
-    <li><strong>Feature Extraction:</strong> Used Term Frequency-Inverse Document Frequency (TF-IDF) to transform text data into numerical features.</li>
 </ul>
 
 <h2>Sentiment Analysis</h2>
@@ -55,13 +43,13 @@
 <h3>Sentiment Scoring</h3>
 <ul>
     <li><strong>Tools Used:</strong> SentimentIntensityAnalyzer from NLTK</li>
-    <li><strong>Classification:</strong> Reviews were classified as positive or negative based on sentiment scores. Binary labels were created for further exploration.</li>
+    <li><strong>Classification:</strong> Reviews classified as positive or negative based on sentiment scores with binary labels created for further exploration.</li>
 </ul>
 
 <h3>Data Encoding</h3>
 <ul>
-    <li><strong>Review Scores:</strong> Encoded review scores above or below 5.</li>
-    <li><strong>Sentiment Labels:</strong> Encoded sentiment labels into binary values for machine learning.</li>
+    <li><strong>Review Scores:</strong> Encoded as above or below a score of 5.</li>
+    <li><strong>Sentiment Labels:</strong> Encoded into binary values for machine learning.</li>
 </ul>
 
 <h2>Predictive Modeling</h2>
@@ -107,26 +95,6 @@
     <li><strong>Text Processing:</strong> Developed a deeper understanding of NLP techniques for sentiment analysis.</li>
     <li><strong>Model Comparison:</strong> Learned the importance of choosing the right model based on the target variable.</li>
 </ul>
-
-<h2>Repository Structure</h2>
-<ul>
-    <li><strong>/data:</strong> Contains sample datasets used for modeling.</li>
-    <li><strong>/scripts:</strong> Includes Python scripts for data collection, pre-processing, and modeling.</li>
-    <li><strong>/notebooks:</strong> Jupyter notebooks demonstrating the end-to-end process.</li>
-    <li><strong>/reports:</strong> Documentation and results analysis.</li>
-</ul>
-
-<h2>How to Run</h2>
-<ol>
-    <li>Clone the repository.</li>
-    <li>Install the required packages:
-        <pre><code>pip install -r requirements.txt</code></pre>
-    </li>
-    <li>Run the Jupyter notebooks or scripts in the <code>/scripts</code> directory.</li>
-</ol>
-
-<h2>Demo</h2>
-<p>Check out the demo of the project in this <a href="#">video link</a>.</p>
 
 <h2>Contact</h2>
 <p>Feel free to reach out if you have any questions or would like to connect:</p>
