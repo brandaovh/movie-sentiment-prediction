@@ -1,8 +1,8 @@
 <h1>Movie Review Sentiment Analysis and Prediction</h1>
-<p>This project was part of my Big Data Analytics course, where we performed end-to-end data analysis, pre-processing, sentiment analysis, and predictive modeling using a movie dataset from data.world and reviews fetched from IMDb.</p>
+<p>This project involved analyzing a combined dataset extracted from a CSV file on data.world and reviews obtained from IMDb through an API. We conducted end-to-end data analysis, pre-processing, sentiment analysis, and predictive modeling.</p>
 
 <h2>Project Overview</h2>
-<p>In this project, we selected a primary dataset with movie information from data.world. We enhanced this dataset by fetching reviews from IMDb using the Cinemagoer API, creating a secondary dataset with additional sentiment-related information. The primary goal was to predict movie review sentiments and review scores using various machine learning models.</p>
+<p>In this project, we selected a primary dataset with movie information from data.world. From there, we extracted a list of movie IDs to fetch review data from IMDb through the Cinemagoer API, creating a secondary dataset with additional sentiment-related information. The primary goal was to predict movie review sentiments and review scores using various machine learning models.</p>
 
 <h2>Technologies Used</h2>
 <ul>
@@ -11,7 +11,6 @@
     <li><strong>NLTK:</strong> Text pre-processing and sentiment analysis.</li>
     <li><strong>Scikit-Learn:</strong> Machine learning models and TF-IDF Vectorization.</li>
     <li><strong>IMDb Cinemagoer API:</strong> Data collection.</li>
-    <li><strong>Parallel Processing:</strong> Optimized API data retrieval.</li>
 </ul>
 
 <h2>Datasets</h2>
@@ -60,7 +59,6 @@
             <li><strong>Review Score Prediction:</strong> Predict if a review score will be above or below 5.</li>
         </ul>
     </li>
-    <li><strong>Approach:</strong> Trained using TF-IDF features from review content.</li>
 </ul>
 
 <h3>Additional Models</h3>
@@ -72,15 +70,15 @@
 
 <h2>Results and Insights</h2>
 <ul>
-    <li><strong>Model Performance:</strong> Logistic Regression provided robust predictions, with notable differences in performance across sentiment prediction and score prediction tasks.</li>
-    <li><strong>Naive Bayes Variants:</strong> Each Naive Bayes variant showed unique strengths depending on the target variable and data distribution.</li>
+    <li><strong>Model Performance:</strong> The Logistic Regression model achieved an accuracy of 91% in predicting sentiment labels and 89% in predicting review scores, as measured by the weighted average F1-score. However, the model exhibited a tendency to overestimate positive sentiment and high review scores, likely due to the imbalanced dataset with a 4:1 ratio of positive/high-score to negative/low-score reviews. Considering this, it is important to have caution and consider the recall scores when using this model to evaluate new data.</li>
+    <li><strong>Naive Bayes Variants:</strong> All models underperformed compared to Logistic Regression. This outcome was anticipated, given that Logistic Regression models capture more complex relationships between features (words) than Naive Bayes models, which are based on the assumption of feature independence. This outcome was expected, since word dependencies play a significant role in sentiment and score prediction.</li>
 </ul>
 
 <h2>Key Learnings</h2>
 <ul>
     <li><strong>API Management:</strong> Gained experience in handling API limitations and optimizing data collection.</li>
     <li><strong>Text Processing:</strong> Developed a deeper understanding of NLP techniques for sentiment analysis.</li>
-    <li><strong>Model Comparison:</strong> Learned the importance of choosing the right model based on the target variable.</li>
+    <li><strong>Model Comparison:</strong> Learned the importance of choosing the right ML model based on trained features.</li>
 </ul>
 
 <h2>Contact</h2>
