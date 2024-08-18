@@ -4,13 +4,25 @@
 <h2>Project Overview</h2>
 <p>In this project, we selected a primary dataset with movie information from data.world. We enhanced this dataset by fetching reviews from IMDb using the Cinemagoer API, creating a secondary dataset with additional sentiment-related information. The primary goal was to predict movie review sentiments and review scores using various machine learning models.</p>
 
+<h2>Technologies Used</h2>
+<ul>
+    <li><strong>Python:</strong> Primary programming language.</li>
+    <li><strong>Pandas:</strong> Data manipulation and cleaning.</li>
+    <li><strong>NLTK:</strong> Text pre-processing and sentiment analysis.</li>
+    <li><strong>Scikit-Learn:</strong> Machine learning models and TF-IDF Vectorization.</li>
+    <li><strong>IMDb Cinemagoer API:</strong> Data collection.</li>
+    <li><strong>Parallel Processing:</strong> Optimized API data retrieval.</li>
+</ul>
+
 <h2>Datasets</h2>
 
 <h3>Primary Dataset: Movie Information</h3>
 <ul>
     <li><strong>Source:</strong> data.world (<a href="https://data.world/iliketurtles/movie-dataset">https://data.world/iliketurtles/movie-dataset</a>)</li>
     <li><strong>Size:</strong> 3,940 movies</li>
-    <li><strong>Contents:</strong> Movie title, Year of Release, Full Summary, Genres, Rating, etc.</li>
+    <li><strong>Contents:</strong>
+        Movie title, Year of Release, Full Summary, Genres, Rating, etc.
+    </li>
 </ul>
 
 <h3>Secondary Dataset: IMDb Reviews</h3>
@@ -38,20 +50,6 @@
     </li>
 </ul>
 
-<h2>Sentiment Analysis</h2>
-
-<h3>Sentiment Scoring</h3>
-<ul>
-    <li><strong>Tools Used:</strong> SentimentIntensityAnalyzer from NLTK</li>
-    <li><strong>Classification:</strong> Reviews classified as positive or negative based on sentiment scores with binary labels created for further exploration.</li>
-</ul>
-
-<h3>Data Encoding</h3>
-<ul>
-    <li><strong>Review Scores:</strong> Encoded as above or below a score of 5.</li>
-    <li><strong>Sentiment Labels:</strong> Encoded into binary values for machine learning.</li>
-</ul>
-
 <h2>Predictive Modeling</h2>
 
 <h3>Logistic Regression Model</h3>
@@ -70,23 +68,12 @@
     <li><strong>Gaussian Naive Bayes (GaussianNB)</strong></li>
     <li><strong>Multinomial Naive Bayes (MultinomialNB)</strong></li>
     <li><strong>Bernoulli Naive Bayes (BernoulliNB)</strong></li>
-    <li><strong>Goal:</strong> Compare model performance across different target variables.</li>
 </ul>
 
 <h2>Results and Insights</h2>
 <ul>
     <li><strong>Model Performance:</strong> Logistic Regression provided robust predictions, with notable differences in performance across sentiment prediction and score prediction tasks.</li>
     <li><strong>Naive Bayes Variants:</strong> Each Naive Bayes variant showed unique strengths depending on the target variable and data distribution.</li>
-</ul>
-
-<h2>Technologies Used</h2>
-<ul>
-    <li><strong>Python:</strong> Primary programming language.</li>
-    <li><strong>Pandas:</strong> Data manipulation and cleaning.</li>
-    <li><strong>NLTK:</strong> Text pre-processing and sentiment analysis.</li>
-    <li><strong>Scikit-Learn:</strong> Machine learning models and TF-IDF Vectorization.</li>
-    <li><strong>IMDb Cinemagoer API:</strong> Data collection.</li>
-    <li><strong>Parallel Processing:</strong> Optimized API data retrieval.</li>
 </ul>
 
 <h2>Key Learnings</h2>
