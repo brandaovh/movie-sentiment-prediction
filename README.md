@@ -34,11 +34,7 @@
 <h2>Data Collection and Pre-processing</h2>
 <ul>
     <li><strong>Challenges:</strong> IMDb API limitations for bulk data retrieval.</li>
-    <li><strong>Techniques Used:</strong>
-        <ul>
-            <li>Batch Processing, Parallel Thread Processing, and Rate Limiting to handle large volumes of data and optimize retrieval.</li>
-        </ul>
-    </li>
+    <li><strong>Techniques Used:</strong> Batch Processing, Parallel Thread Processing, and Request Throttling to handle large volumes of data and optimize retrieval.</li>
     <li><strong>Data Standardization:</strong> Converted the fetched reviews into a Pandas DataFrame and standardized the data for consistency.</li>
     <li><strong>Text Processing:</strong>
         <ul>
@@ -69,16 +65,15 @@
 </ul>
 
 <h2>Results and Insights</h2>
-<ul>
-    <li><strong>Model Performance:</strong> The Logistic Regression model achieved an accuracy of 91% in predicting sentiment labels and 89% in predicting review scores, as measured by the weighted average F1-score. However, the model exhibited a tendency to overestimate positive sentiment and high review scores, likely due to the imbalanced dataset with a 4:1 ratio of positive/high-score to negative/low-score reviews. Considering this, it is important to have caution and consider the recall scores when using this model to evaluate new data.</li>
-    <li><strong>Naive Bayes Variants:</strong> All models underperformed compared to Logistic Regression. This outcome was anticipated, given that Logistic Regression models capture more complex relationships between features (words) than Naive Bayes models, which are based on the assumption of feature independence. This outcome was expected, since word dependencies play a significant role in sentiment and score prediction.</li>
+<li><strong>Model Performance:</strong> The Logistic Regression model achieved an accuracy of 91% in predicting sentiment labels and 89% in predicting review scores, as measured by the weighted average F1-score. However, the model exhibited a tendency to overestimate positive sentiment and high review scores, likely due to the imbalanced dataset with a 4:1 ratio of positive/high-score to negative/low-score reviews. Considering this, it is important to have caution and consider the recall scores when using this model to evaluate new data.</li>
+<li><strong>Naive Bayes Variants:</strong> All models underperformed compared to Logistic Regression, as anticipated. This result aligns with the understanding that Logistic Regression can better capture complex relationships between features (in this case, words) compared to Naive Bayes models, which operate under the assumption of feature independence. Given the importance of word dependencies in sentiment and score prediction, this outcome is consistent with expectations.</li>
 </ul>
 
 <h2>Key Learnings</h2>
 <ul>
     <li><strong>API Management:</strong> Gained experience in handling API limitations and optimizing data collection.</li>
-    <li><strong>Text Processing:</strong> Developed a deeper understanding of NLP techniques for sentiment analysis.</li>
-    <li><strong>Model Comparison:</strong> Learned the importance of choosing the right ML model based on trained features.</li>
+    <li><strong>Text Processing:</strong> Developed a deeper understanding of NLP transformation and pre-processing techniques for sentiment analysis.</li>
+    <li><strong>Model Comparison:</strong> Learned the importance of choosing the right ML model based on trained features and targets.</li>
 </ul>
 
 <h2>Contact</h2>
